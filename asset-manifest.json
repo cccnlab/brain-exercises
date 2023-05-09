@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/brain-excercises-hard/static/css/main.2a0dd03c.css",
+    "main.js": "/brain-excercises-hard/static/js/main.a649aef0.js",
+    "static/js/845.cbded20c.chunk.js": "/brain-excercises-hard/static/js/845.cbded20c.chunk.js",
+    "static/js/787.ae1d82b4.chunk.js": "/brain-excercises-hard/static/js/787.ae1d82b4.chunk.js",
+    "static/media/ss-img.png": "/brain-excercises-hard/static/media/ss-img.1085540175ca227062c4.png",
+    "static/media/combo1.mp3": "/brain-excercises-hard/static/media/combo1.1bc6ea7eed39c4f2c3b8.mp3",
+    "static/media/combo2.mp3": "/brain-excercises-hard/static/media/combo2.dc4a26f58622d3a5a4c0.mp3",
+    "static/media/gonogo-img.png": "/brain-excercises-hard/static/media/gonogo-img.08938eb2418f1fbc937f.png",
+    "static/media/combo3.mp3": "/brain-excercises-hard/static/media/combo3.baee467a5476a005d616.mp3",
+    "static/media/scoreBadge.png": "/brain-excercises-hard/static/media/scoreBadge.19ad617b855d5df93fd6.png",
+    "static/media/conjs-img.png": "/brain-excercises-hard/static/media/conjs-img.d1ba3970365015d5ee9b.png",
+    "static/media/canvas.png": "/brain-excercises-hard/static/media/canvas.af9dd0d3d32af858101d.png",
+    "static/media/click.mp3": "/brain-excercises-hard/static/media/click.bac13dc239761d7d5b08.mp3",
+    "static/media/instructionFinished.png": "/brain-excercises-hard/static/media/instructionFinished.fed3583b2d80ff6a5f4b.png",
+    "static/media/losingStreak.mp3": "/brain-excercises-hard/static/media/losingStreak.3e9f53afed48af7cc022.mp3",
+    "static/media/rotate-phone.svg": "/brain-excercises-hard/static/media/rotate-phone.6172f756fbd62559e2be4c10385ec685.svg",
+    "index.html": "/brain-excercises-hard/index.html",
+    "main.2a0dd03c.css.map": "/brain-excercises-hard/static/css/main.2a0dd03c.css.map",
+    "main.a649aef0.js.map": "/brain-excercises-hard/static/js/main.a649aef0.js.map",
+    "845.cbded20c.chunk.js.map": "/brain-excercises-hard/static/js/845.cbded20c.chunk.js.map",
+    "787.ae1d82b4.chunk.js.map": "/brain-excercises-hard/static/js/787.ae1d82b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a0dd03c.css",
+    "static/js/main.a649aef0.js"
+  ]
+}
