@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/brain-exercises-hard/static/css/main.668d171d.css",
-    "main.js": "/brain-exercises-hard/static/js/main.b35eedce.js",
+    "main.js": "/brain-exercises-hard/static/js/main.20d72432.js",
     "static/js/845.a80e4097.chunk.js": "/brain-exercises-hard/static/js/845.a80e4097.chunk.js",
     "static/js/787.3f2bc347.chunk.js": "/brain-exercises-hard/static/js/787.3f2bc347.chunk.js",
-    "static/media/ss-img.png": "/brain-exercises-hard/static/media/ss-img.1085540175ca227062c4.png",
     "static/media/combo1.mp3": "/brain-exercises-hard/static/media/combo1.1bc6ea7eed39c4f2c3b8.mp3",
     "static/media/combo2.mp3": "/brain-exercises-hard/static/media/combo2.dc4a26f58622d3a5a4c0.mp3",
     "static/media/gonogo-img.png": "/brain-exercises-hard/static/media/gonogo-img.08938eb2418f1fbc937f.png",
     "static/media/combo3.mp3": "/brain-exercises-hard/static/media/combo3.baee467a5476a005d616.mp3",
+    "static/media/ss-img.png": "/brain-exercises-hard/static/media/ss-img.933229e186dcdd3ea7d4.png",
     "static/media/scoreBadge.png": "/brain-exercises-hard/static/media/scoreBadge.19ad617b855d5df93fd6.png",
     "static/media/conjs-img.png": "/brain-exercises-hard/static/media/conjs-img.d1ba3970365015d5ee9b.png",
     "static/media/canvas.png": "/brain-exercises-hard/static/media/canvas.af9dd0d3d32af858101d.png",
@@ -18,12 +18,12 @@
     "static/media/rotate-phone.svg": "/brain-exercises-hard/static/media/rotate-phone.6172f756fbd62559e2be4c10385ec685.svg",
     "index.html": "/brain-exercises-hard/index.html",
     "main.668d171d.css.map": "/brain-exercises-hard/static/css/main.668d171d.css.map",
-    "main.b35eedce.js.map": "/brain-exercises-hard/static/js/main.b35eedce.js.map",
+    "main.20d72432.js.map": "/brain-exercises-hard/static/js/main.20d72432.js.map",
     "845.a80e4097.chunk.js.map": "/brain-exercises-hard/static/js/845.a80e4097.chunk.js.map",
     "787.3f2bc347.chunk.js.map": "/brain-exercises-hard/static/js/787.3f2bc347.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.668d171d.css",
-    "static/js/main.b35eedce.js"
+    "static/js/main.20d72432.js"
   ]
 }
