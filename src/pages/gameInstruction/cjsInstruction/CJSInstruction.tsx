@@ -236,7 +236,7 @@ function CJSInstruction(props) {
             if (tutorialTest === '') {
                 setTutorialTest('wrong');
             }
-            // losingSound()
+            // losingSound();
             trackRecord = 0;
             setTimeout(() => {
                 setTryAgain(true);

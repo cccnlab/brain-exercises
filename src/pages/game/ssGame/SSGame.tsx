@@ -42,7 +42,7 @@ let trialNumber;
 let currSpan = initialSpan;
 let currTrial: number = 0;
 let allSpan: number[] = [];
-let spanSizeAndDirection: number[][] = [];
+let spanSizeAndDirection: number[] = [];
 let spanInCorrectAns: any[] = [];
 let allSeq: string[] = [];
 let genSeq: number[] = [];
@@ -122,74 +122,74 @@ function SSGame(props) {
       }
 
       if (event.currentTarget.classList.contains('1')) {
-          currAns.push(1);
-          ($('#cirButton1').addClass('clicked'));
-          ($('#border1').addClass('clicked'));
-          ($('#cirButton1').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton1').removeClass('clicked');
-                  $('#border1').removeClass('clicked');
-              }, 150)
-          )
-      } else if (event.currentTarget.classList.contains('2')) {
-          currAns.push(2);
-          ($('#cirButton2').addClass('clicked'));
-          ($('#border2').addClass('clicked'));
-          ($('#cirButton2').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton2').removeClass('clicked');
-                  $('#border2').removeClass('clicked');
-              }, 150)
-          )
-      } else if (event.currentTarget.classList.contains('3')) {
-          currAns.push(3);
-          ($('#cirButton3').addClass('clicked'));
-          ($('#border3').addClass('clicked'));
-          ($('#cirButton3').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton3').removeClass('clicked')
-                  $('#border3').removeClass('clicked');
-              }, 150)
-          )
-      } else if (event.currentTarget.classList.contains('4')) { 
-          currAns.push(4);
-          ($('#cirButton4').addClass('clicked'));
-          ($('#border4').addClass('clicked'));
-          ($('#cirButton4').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton4').removeClass('clicked');
-                  $('#border4').removeClass('clicked');
-              }, 150)
-          )
-      } else if (event.currentTarget.classList.contains('5')) {
-          currAns.push(5);
-          ($('#cirButton5').addClass('clicked'));
-          ($('#border5').addClass('clicked'));
-          ($('#cirButton5').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton5').removeClass('clicked');
-                  $('#border5').removeClass('clicked');
-              }, 150)
-          )
-      } else {
-          currAns.push(6);
-          ($('#cirButton6').addClass('clicked'));
-          ($('#border6').addClass('clicked'));
-          ($('#cirButton6').addClass('hoverDisabled'));
-          timeoutList.push(
-              setTimeout(function() {
-                  $('#cirButton6').removeClass('clicked');
-                  $('#border6').removeClass('clicked');
-              }, 150)
-          )
-      }
+        currAns.push(1);
+        ($('#cirButton1').addClass('clicked'));
+        ($('#border1').addClass('clicked'));
+        ($('#cirButton1').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton1').removeClass('clicked');
+                $('#border1').removeClass('clicked');
+            }, 150)
+        )
+    } else if (event.currentTarget.classList.contains('2')) {
+        currAns.push(2);
+        ($('#cirButton2').addClass('clicked'));
+        ($('#border2').addClass('clicked'));
+        ($('#cirButton2').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton2').removeClass('clicked');
+                $('#border2').removeClass('clicked');
+            }, 150)
+        )
+    } else if (event.currentTarget.classList.contains('3')) {
+        currAns.push(3);
+        ($('#cirButton3').addClass('clicked'));
+        ($('#border3').addClass('clicked'));
+        ($('#cirButton3').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton3').removeClass('clicked')
+                $('#border3').removeClass('clicked');
+            }, 150)
+        )
+    } else if (event.currentTarget.classList.contains('4')) { 
+        currAns.push(4);
+        ($('#cirButton4').addClass('clicked'));
+        ($('#border4').addClass('clicked'));
+        ($('#cirButton4').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton4').removeClass('clicked');
+                $('#border4').removeClass('clicked');
+            }, 150)
+        )
+    } else if (event.currentTarget.classList.contains('5')) {
+        currAns.push(5);
+        ($('#cirButton5').addClass('clicked'));
+        ($('#border5').addClass('clicked'));
+        ($('#cirButton5').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton5').removeClass('clicked');
+                $('#border5').removeClass('clicked');
+            }, 150)
+        )
+    } else {
+        currAns.push(6);
+        ($('#cirButton6').addClass('clicked'));
+        ($('#border6').addClass('clicked'));
+        ($('#cirButton6').addClass('hoverDisabled'));
+        timeoutList.push(
+            setTimeout(function() {
+                $('#cirButton6').removeClass('clicked');
+                $('#border6').removeClass('clicked');
+            }, 150)
+        )
+    }
 
-      if (currAns.length === spanSizeAndDirection[currTrial][0]) {
+      if (currAns.length === spanSizeAndDirection[currTrial]) {
           $('.cirButton').removeClass('hoverDisabled'); 
           $('.cirButton').addClass('hoverDisabled'); 
           cueData(currSeq, cueColor, cueBorderColor, cueStartTime, cueEndTime);
@@ -197,7 +197,7 @@ function SSGame(props) {
           answerData(currAns, answerTimePerTrial);
           timeoutList.push(
               setTimeout(function() {
-                  $('.cirButton').removeClass('clicked');
+                  $('.cirButton').removeClass('clicked'); 
               }, 150)
           )
 
@@ -207,10 +207,6 @@ function SSGame(props) {
           
           const equalCheck = (currAns: any[], currSeq: string | any[]) => 
               currAns.length === currSeq.length && currAns.every((value, index) => value === currSeq[index]);
-              
-          if (spanSizeAndDirection[currTrial][1] === 1){
-              currAns.reverse();
-          } 
 
           if (equalCheck(currAns, currSeq)) {
               $('#goSignal').html("ถูก");
@@ -373,14 +369,14 @@ function SSGame(props) {
 
   function createPseudorandomStimuli() {
     let allSpanSizeRange = [2, 3, 4, 5];
-    let trialsPerSpanSize = 10; 
-    let sequenceDirection = 2; // forward and backward
+    let trialsPerSpanSize = 10;  
+    let sequenceDirection = 1; // forward only
     let trialsPerDirection = trialsPerSpanSize / sequenceDirection; 
 
     for (let iSpanSize = 0; iSpanSize < allSpanSizeRange.length; iSpanSize++) {
         for (let iRep = 0; iRep < trialsPerDirection; iRep++) {
             for (let iDirection = 0; iDirection < sequenceDirection; iDirection++) {
-                spanSizeAndDirection.push([allSpanSizeRange[iSpanSize],iDirection])
+                spanSizeAndDirection.push(allSpanSizeRange[iSpanSize])
             }
         }
     }
@@ -388,51 +384,33 @@ function SSGame(props) {
     trialNumber = trialsPerSpanSize * allSpanSizeRange.length;
     }
 
-  function colorGenerator() {
-    if (parseInt(props.userId) % 2 == 0){ // check if userId was even or odd number
-        // even number section
-        if (spanSizeAndDirection[currTrial][1] === 0){
+    function colorGenerator() {
+        if (parseInt(props.userId) % 2 == 0){ // check if userId was even or odd number
+            // even number section
             // forward : blue
             document.documentElement.style.setProperty('--cue-color', '#0072ff'); 
             document.documentElement.style.setProperty('--cue-border-color', '#0072ff'); 
         } else {
-            // backward : yellow
-            document.documentElement.style.setProperty('--cue-color', '#ffc837'); 
-            document.documentElement.style.setProperty('--cue-border-color', '#ffc837'); 
-        }
-    } else {
-        // odd number section
-        if (spanSizeAndDirection[currTrial][1] === 0){
+            // odd number section
             // forward : yellow
             document.documentElement.style.setProperty('--cue-color', '#ffc837'); 
             document.documentElement.style.setProperty('--cue-border-color', '#ffc837'); 
-        } else {
-            // backward : blue
-            document.documentElement.style.setProperty('--cue-color', '#0072ff'); 
-            document.documentElement.style.setProperty('--cue-border-color', '#0072ff'); 
         }
+        cueColor = getComputedStyle(document.documentElement).getPropertyValue('--cue-color').trim();
+        cueBorderColor = getComputedStyle(document.documentElement).getPropertyValue('--cue-border-color').trim();
     }
-    cueColor = getComputedStyle(document.documentElement).getPropertyValue('--cue-color').trim();
-    cueBorderColor = getComputedStyle(document.documentElement).getPropertyValue('--cue-border-color').trim();
+
+    function seqGenerator() {
+        if (currTrial !== trialNumber) {
+            allSpan.push(spanSizeAndDirection[currTrial]);
+            if (genSeq.length === 0) {
+                let trialSeqGenerator: number[] = samplingFromList(allProbe, spanSizeAndDirection[currTrial], false);
+                genSeq = trialSeqGenerator;
+  
+                timeIntervalPerTrial();
+            }
+        } 
     }
-
-function seqGenerator() {
-      if (currTrial !== trialNumber) {
-          allSpan.push(spanSizeAndDirection[currTrial][0]);
-          if (genSeq.length === 0) {
-              let trialSeqGenerator: number[] = samplingFromList(allProbe, spanSizeAndDirection[currTrial][0], false);
-              genSeq = trialSeqGenerator;
-
-              if (spanSizeAndDirection[currTrial][1] === 0){
-                    directionMode.push('forward');
-                } else {
-                    directionMode.push('backward');
-                }
-
-              timeIntervalPerTrial();
-          }
-      } 
-  }
 
   function timeIntervalPerTrial() {
     $('.cirButton').addClass('hoverDisabled');
@@ -461,11 +439,7 @@ function seqGenerator() {
     timeoutList.push(
         setTimeout(function() {
             $('#goSignal').html("");
-            if (spanSizeAndDirection[currTrial][1] === 0){
-                $('#goSignal').html("ตามลำดับ");
-            } else {
-                $('#goSignal').html("ย้อนกลับ");
-            }
+            $('#goSignal').html("ตามลำดับ");
             colorGenerator();
         }, 3100) 
     )
@@ -492,10 +466,10 @@ function seqGenerator() {
               $('.cirButton').removeClass('hoverDisabled');
               $('.cirButton').addClass('readyToClick');
               isTest = true;
-          }, spanSizeAndDirection[currTrial][0] * ((popTime/5) + (intervalTime))) 
+          }, spanSizeAndDirection[currTrial] * ((popTime/5) + (intervalTime))) 
       )
   
-      for (let i = 0; i < spanSizeAndDirection[currTrial][0]; i++) {
+      for (let i = 0; i < spanSizeAndDirection[currTrial]; i++) {
           if (genSeq[i] === 1) {
               timeoutList.push(
                   setTimeout(function () {
@@ -625,7 +599,7 @@ function seqGenerator() {
       scoringDataResult = scoringData(trialNumber, spanMultiplier, score);
       metricDataResult = metricData(trialNumber, summaryCorrect, spanInCorrectAns, enterStruggleTimeCount);
       postEntryResult = postEntry(trialDataResult, gameLogicSchemeResult, scoringDataResult, metricDataResult);
-      axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-hard/spatial-span', postEntryResult)
+      axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-easy/spatial-span', postEntryResult)
             .then(function (postEntryResult) {
                 console.log(postEntryResult)
             })
@@ -692,16 +666,16 @@ function seqGenerator() {
       return answerDataResult;
   }
 
-  function trialData(spanSizeAndDirection: number[][], cueDataResult: any[], probeDataResult: any[], answerDataResult: any[], directionMode: string[]){
+  function trialData(spanSizeAndDirection: number[], cueDataResult: any[], probeDataResult: any[], answerDataResult: any[], directionMode: string[]){
       
       for (let i = 0; i < trialNumber; i++) {
           let obj_to_append;
           obj_to_append = {
-              "spanSize" : spanSizeAndDirection[i][0],
+              "spanSize" : spanSizeAndDirection[i],
               "cueData" : cueDataResult[i],
               "probeData" : probeDataResult[i],
               "answerData" : answerDataResult[i],
-              "mode" : directionMode[i]
+              "mode" : 'forward'
           }
           trialDataResult.push(obj_to_append);
       }
@@ -765,16 +739,16 @@ function seqGenerator() {
 
   function postEntry(trialDataResult: any[], gameLogicSchemeResult: { game: string; schemeName: string; version: number; variant: string; parameters: { trialNumber: { value: any; unit: null; description: string }; flashDuration: { value: any; unit: string; description: string }; flashInterval: { value: any; unit: string; description: string }; initialSpan: { value: any; unit: null; description: string }; probeNumber: { value: any; unit: null; description: string }; probeAngularPosition: { value: any; unit: string; description: string }; rampingCorrectCount: { value: any; unit: null; description: string }; maxFailStreakCount: { value: any; unit: null; description: string }; maxFailCount: { value: any; unit: null; description: string } }; description: string }, scoringDataResult: any[], metricDataResult: any[]){
       postEntryResult = {
-          "userId" : props.userId,
-          "userPhone" : props.userPhone,
-          "data" : {
-              "rawData" : {
-                  "trialData" : trialDataResult,
-                  "description" : 'all important data per trial'
-              },
-              "gameLogicScheme" : gameLogicSchemeResult,
-              "scoringData" : scoringDataResult,
-              "metricData" : metricDataResult
+        "userId" : props.userId,
+        "userPhone" : props.userPhone,
+        "data" : {
+            "rawData" : {
+                "trialData" : trialDataResult,
+                "description" : 'all important data per trial'
+            },
+            "gameLogicScheme" : gameLogicSchemeResult,
+            "scoringData" : scoringDataResult,
+            "metricData" : metricDataResult
           }
       }
       return postEntryResult;
@@ -801,6 +775,15 @@ function seqGenerator() {
 
         avgHitRt = sumHitRt / 1000 / hitRt.length;
       
+      if (hitRt.length !== 0){
+
+        sumHitRt = hitRt.reduce((sum, time) => {
+          return sum + time;
+          });
+      }
+
+      avgHitRt = sumHitRt / 1000 / hitRt.length;
+
       if (scorePerTrial.length !== 0){
           sumScores = scorePerTrial.reduce((sum, score) => {
             return sum + score;
