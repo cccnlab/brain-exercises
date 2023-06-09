@@ -6,13 +6,17 @@ function ScoreSummaryOverlay(props) {
   return (
     <div className="summary">
       <div className="summaryContainer">
+          {props.hardGNGDone ? 
+          <div className="summaryHeader">
+              <p className='thisScore'>กดถูกต้อง : {Math.round(props.accuracy)} %</p>
+              <p className='thisScore'>เผลอกดผิด : {Math.round(props.falseHit)} %</p>
+          </div> : 
           <div className="summaryHeader">
               <p className='thisScore'>ตอบถูกทั้งหมด</p>
               <p className='bigScore'>{Math.round(props.accuracy).toLocaleString() + ' %'}</p>
-          </div>
+          </div>}
           <div className="summaryBadge">
               <img src={scoreBadge} alt='badge' className={'medalBadge'}></img>
-              {props.hardGNGDone ? <p className='highestScore'>เผลอกดผิดพลาด: {Math.round(props.falseHit)} %</p> : null}
               <p className='highestScore'>ความเร็วเฉลี่ย: {(props.avgHitRt).toFixed(2)} วินาที</p>
           </div>
           <div className="btnContainerSummary">
