@@ -531,8 +531,8 @@ function GNGGame(props) {
                     comboCount.push(4);
                     // combo3Sound();
                 }
+                hitCount++;
             }
-            hitCount++;
         } else {
             if (falseClicked === false) {
                 correctCountForCombo = 0;
