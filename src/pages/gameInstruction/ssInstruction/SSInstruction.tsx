@@ -108,14 +108,14 @@ function SSInstruction(props) {
             setTimeout(function() {
                 $('#goSignalInstruction').html("");
                 $('#goSignalInstruction').html("2");
-            }, 1100) 
+            }, 400) 
         )
 
         timeoutList.push(
             setTimeout(function() {
                 $('#goSignalInstruction').html("");
                 $('#goSignalInstruction').html("1");
-            }, 2100) 
+            }, 700) 
         )
 
         timeoutList.push(
@@ -126,13 +126,13 @@ function SSInstruction(props) {
                 } else {
                     $('#goSignalInstruction').html("ย้อนกลับ");
                 }
-            }, 3100) 
+            }, 1000) 
         )
 
         timeoutList.push(
             setTimeout(function() {
                 examplePopCircleButton();
-            }, 4100) 
+            }, 2000) 
         )
     }
 
@@ -283,14 +283,14 @@ function SSInstruction(props) {
             setTimeout(function() {
                 $('#goSignal').html("");
                 $('#goSignal').html("2");
-            }, 1100) 
+            }, 400) 
         )
 
         timeoutList.push(
             setTimeout(function() {
                 $('#goSignal').html("");
                 $('#goSignal').html("1");
-            }, 2100) 
+            }, 700) 
         )
 
         timeoutList.push(
@@ -301,13 +301,13 @@ function SSInstruction(props) {
                 } else {
                     $('#goSignal').html("ย้อนกลับ");
                 }
-            }, 3100) 
+            }, 1000) 
         )
 
         timeoutList.push(
             setTimeout(function() {
                 instructionPopCircleButton();
-            }, 4100) 
+            }, 2000) 
         )
     }
 
