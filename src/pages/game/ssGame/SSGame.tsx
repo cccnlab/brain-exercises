@@ -380,12 +380,43 @@ function SSGame(props) {
     for (let iSpanSize = 0; iSpanSize < allSpanSizeRange.length; iSpanSize++) {
         for (let iRep = 0; iRep < trialsPerDirection; iRep++) {
             for (let iDirection = 0; iDirection < sequenceDirection; iDirection++) {
-                spanSizeAndDirection.push([allSpanSizeRange[iSpanSize],iDirection])
+                spanSizeAndDirection.push([allSpanSizeRange[iSpanSize],iDirection]);
             }
         }
     }
-    Shuffle(spanSizeAndDirection);
+    shuffleWithCondition();
     trialNumber = trialsPerSpanSize * allSpanSizeRange.length;
+    }
+
+    function shuffleWithCondition() { 
+        // condition: prevent repetition 4 times in the row in every modes
+        let conditionUnsatisfied: boolean = true;
+        
+        // this while loop will be continue till the conditionUnsatisfied turns to false
+        while (conditionUnsatisfied) { 
+            let allDirection: number[] = [];
+            let reShuffle: boolean = false;
+            Shuffle(spanSizeAndDirection); 
+
+            for (let i = 0; i < spanSizeAndDirection.length; i++){
+                // push only direction mode into allDirection array
+                allDirection.push(spanSizeAndDirection[i][1]); 
+                        
+                // check this array for mode value(0 or 1) 4 times repetition in the row 
+                if (allDirection[i] === allDirection[i - 1] && 
+                    allDirection[i] === allDirection[i - 2] && 
+                    allDirection[i] === allDirection[i - 3]){
+                    // when the loop found 4 times repetition, change the reShuffle = true
+                    reShuffle = true;
+                } 
+            }
+            
+            // didn't find any 4 times repetition, reShuffle still 'false' from the beginning of the while loop
+            if (reShuffle === false) {
+                // change conditionUnsatisfied = false to end the while loop
+                conditionUnsatisfied = false;
+            }
+        }
     }
 
   function colorGenerator() {
@@ -448,14 +479,14 @@ function seqGenerator() {
         setTimeout(function() {
             $('#goSignal').html("");
             $('#goSignal').html("2");
-        }, 1100)
+        }, 400)
     )
 
     timeoutList.push(
         setTimeout(function() {
             $('#goSignal').html("");
             $('#goSignal').html("1");
-        }, 2100) 
+        }, 700) 
     )
 
     timeoutList.push(
@@ -467,13 +498,13 @@ function seqGenerator() {
                 $('#goSignal').html("ย้อนกลับ");
             }
             colorGenerator();
-        }, 3100) 
+        }, 1000) 
     )
 
     timeoutList.push(
         setTimeout(function() {
             popCircleButton();
-        }, 4100) 
+        }, 2000) 
     )
 }
   
