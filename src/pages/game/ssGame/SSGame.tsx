@@ -492,11 +492,7 @@ function SSGame(props) {
     timeoutList.push(
         setTimeout(function() {
             $('#goSignal').html("");
-            if (spanSizeAndDirection[currTrial][1] === 0){
-                $('#goSignal').html("ตามลำดับ");
-            } else {
-                $('#goSignal').html("ย้อนกลับ");
-            }
+            $('#goSignal').html("ตามลำดับ");
             colorGenerator();
         }, 1000) 
     )
@@ -656,7 +652,7 @@ function SSGame(props) {
       scoringDataResult = scoringData(trialNumber, spanMultiplier, score);
       metricDataResult = metricData(trialNumber, summaryCorrect, spanInCorrectAns, enterStruggleTimeCount);
       postEntryResult = postEntry(trialDataResult, gameLogicSchemeResult, scoringDataResult, metricDataResult);
-      axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-hard/spatial-span', postEntryResult)
+      axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-easy/spatial-span', postEntryResult)
             .then(function (postEntryResult) {
                 console.log(postEntryResult)
             })
@@ -728,11 +724,11 @@ function SSGame(props) {
       for (let i = 0; i < trialNumber; i++) {
           let obj_to_append;
           obj_to_append = {
-              "spanSize" : spanSizeAndDirection[i][0],
+              "spanSize" : spanSizeAndDirection[i],
               "cueData" : cueDataResult[i],
               "probeData" : probeDataResult[i],
               "answerData" : answerDataResult[i],
-              "mode" : directionMode[i]
+              "mode" : 'forward'
           }
           trialDataResult.push(obj_to_append);
       }

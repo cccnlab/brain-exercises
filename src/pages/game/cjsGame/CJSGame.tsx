@@ -136,17 +136,18 @@ function CJSGame(props): any {
         useEffect(() => {
             if (searchTarget) {
                 oris = [];
-                for (let j = 0; j < maxSS; j++) { oris.push(0); oris.push(0)};
                 cols = [];
-                for (let k = 0; k < maxSS; k++) { cols.push(0); cols.push(1)};
+                for (let j = 0; j < maxSS; j++) { oris.push(0); oris.push(0)};
                 if (searchTarget.shape === 1) {
                     shapeRand = [1];
                 } else {
                     shapeRand = [0];
                 }
                 if (searchTarget.col === 1) {
-                    for (let k = 0; k < cols.length; k++) { cols[k] = 1 - cols[k] };
-                } 
+                    for (let k = 0; k < maxSS; k++) { cols.push(0); cols.push(0)};
+                } else {
+                    for (let k = 0; k < maxSS; k++) { cols.push(1); cols.push(1)};
+                }
                 createTargetCanvas();
                 createPseudorandomStimuli();
                 createCanvas();
@@ -374,7 +375,7 @@ function CJSGame(props): any {
             col.push(stimulusColor[cols[setSize]]);
         } else {
             ori.push(1 - oris[setSize]);
-            col.push(stimulusColor[cols[setSize]]);
+            col.push(stimulusColor[1 - cols[setSize]]);
         }
     }
 
@@ -443,7 +444,7 @@ function CJSGame(props): any {
         
         for (let i = 0; i < col.length; i++){
             let obj_to_append;
-            if (ori[i] === shapeRand[0]) {
+            if (shapeRand[0] === 0) {
                 thisShape = "circle";
                 thisParameterName = "radius";
                 thisValue = radius;
@@ -477,6 +478,14 @@ function CJSGame(props): any {
             obj_in_trial.push(obj_to_append);
         }
         obj_in_trial[obj_in_trial.length - 1].type = "target";
+
+        if (targetMatch[currTrial] === true){
+            if (obj_in_trial[obj_in_trial.length - 1].display.shape  === "circle"){
+                obj_in_trial[obj_in_trial.length - 1].display.shape  = "square";
+            } else {
+                obj_in_trial[obj_in_trial.length - 1].display.shape  = "circle";
+            }
+        }
         stimulusDataResult.push(obj_in_trial);
         return stimulusDataResult;
     }
@@ -680,7 +689,7 @@ function CJSGame(props): any {
         scoringDataResult = scoringData(rtBound, incorrectMultiplier, lateMultiplier, scoresMultiplier, trialNumber, total);
         metricDataResult = metricData(trialNumber, incorrectCount, correctButLateCount, setSizeInCorrectAns, timeLimitRecord, hitRt, avgHitRt, swiftness);
         postEntryResult = postEntry(targetDataResult, trialDataResult, gameLogicSchemeResult, scoringDataResult, metricDataResult);
-        axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-hard/conjunction-search', postEntryResult)
+        axios.post('https://hwsrv-1063269.hostwindsdns.com/exercise-api-easy/conjunction-search', postEntryResult)
             .then(function (postEntryResult) {
                 console.log(postEntryResult)
             })
