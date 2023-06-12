@@ -89,7 +89,7 @@ let lateMultiplier = 10000;
 let incorrectCount = 0;
 let incorrectMultiplier = 20000;
 let scorePerTrial = [0];
-let sumScores = 0;
+let sumScores: number = 0;
 let scoresMultiplier = 10;
 let comboCount: number[] = [];
 let rtBound = 10000;
@@ -141,8 +141,7 @@ function CJSGame(props): any {
                 for (let k = 0; k < maxSS; k++) { cols.push(0); cols.push(1)};
                 if (searchTarget.shape === 1) {
                     shapeRand = [1];
-                } 
-                else {
+                } else {
                     shapeRand = [0];
                 }
                 if (searchTarget.col === 1) {
@@ -587,7 +586,7 @@ function CJSGame(props): any {
             trialConclude();
         }
     }
-    
+
     function trialConclude() {
         setDisabledButton(true);
         vismem.erase(canvasContext);

@@ -463,11 +463,11 @@ function GNGGame(props) {
                             hitRt.push(currRt - currTimePop.getTime());
                         }
                         satisfied = true;
+                        }
+                    } else {
+                        break;
                     }
-                } else {
-                    break;
                 }
-            }
         }
         getSummaryScore();
     }
