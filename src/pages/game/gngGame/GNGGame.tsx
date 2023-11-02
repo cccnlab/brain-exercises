@@ -187,7 +187,7 @@ function GNGGame(props) {
                 "nogoRate" : {
                     "value": noGoRate,
                     "unit": null,
-                    "description": "Rate of no go signal"
+                    "description": "Rate of nogo signal"
                 },
                 "onlyGoBlockRatio": {
                     "value": onlyGoBlockRatio,
