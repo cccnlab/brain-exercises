@@ -124,7 +124,7 @@ function SSGame(props) {
       gameLogicSchemeResult = gameLogicScheme(trialNumber, flashDuration, flashInterval, initialSpan, probeNumber, probeAngularPosition, rampingCorrectCount, maxFailStreakCount, maxFailCount);
       progressBarElement = document.getElementById("progressBar") as HTMLProgressElement;
       seqGenerator();
-      
+
       return () => {
         timeoutList.forEach(tm => {
             clearTimeout(tm);
@@ -386,6 +386,7 @@ function SSGame(props) {
       scorePerTrial = [];
       summaryCorrect = 0;
       sumScores = 0;
+      currTrial = 0;
       hit2SpanSizeRtForward = [];
       hit3SpanSizeRtForward = [];
       hit4SpanSizeRtForward = [];
