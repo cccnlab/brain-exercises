@@ -1,29 +1,21 @@
 {
   "files": {
-    "main.css": "/brain-exercises-hard/static/css/main.9d88b98f.css",
-    "main.js": "/brain-exercises-hard/static/js/main.11536790.js",
-    "static/js/845.a80e4097.chunk.js": "/brain-exercises-hard/static/js/845.a80e4097.chunk.js",
-    "static/js/787.3f2bc347.chunk.js": "/brain-exercises-hard/static/js/787.3f2bc347.chunk.js",
-    "static/media/combo1.mp3": "/brain-exercises-hard/static/media/combo1.1bc6ea7eed39c4f2c3b8.mp3",
-    "static/media/combo2.mp3": "/brain-exercises-hard/static/media/combo2.dc4a26f58622d3a5a4c0.mp3",
-    "static/media/gonogo-img.png": "/brain-exercises-hard/static/media/gonogo-img.08938eb2418f1fbc937f.png",
-    "static/media/combo3.mp3": "/brain-exercises-hard/static/media/combo3.baee467a5476a005d616.mp3",
-    "static/media/ss-img.png": "/brain-exercises-hard/static/media/ss-img.933229e186dcdd3ea7d4.png",
-    "static/media/scoreBadge.png": "/brain-exercises-hard/static/media/scoreBadge.19ad617b855d5df93fd6.png",
-    "static/media/conjs-img.png": "/brain-exercises-hard/static/media/conjs-img.d1ba3970365015d5ee9b.png",
-    "static/media/click.mp3": "/brain-exercises-hard/static/media/click.bac13dc239761d7d5b08.mp3",
-    "static/media/canvas.png": "/brain-exercises-hard/static/media/canvas.1f0ab07174c44ae4a28f.png",
-    "static/media/instructionFinished.png": "/brain-exercises-hard/static/media/instructionFinished.fed3583b2d80ff6a5f4b.png",
-    "static/media/losingStreak.mp3": "/brain-exercises-hard/static/media/losingStreak.3e9f53afed48af7cc022.mp3",
-    "static/media/rotate-phone.svg": "/brain-exercises-hard/static/media/rotate-phone.6172f756fbd62559e2be4c10385ec685.svg",
-    "index.html": "/brain-exercises-hard/index.html",
-    "main.9d88b98f.css.map": "/brain-exercises-hard/static/css/main.9d88b98f.css.map",
-    "main.11536790.js.map": "/brain-exercises-hard/static/js/main.11536790.js.map",
-    "845.a80e4097.chunk.js.map": "/brain-exercises-hard/static/js/845.a80e4097.chunk.js.map",
-    "787.3f2bc347.chunk.js.map": "/brain-exercises-hard/static/js/787.3f2bc347.chunk.js.map"
+    "main.css": "/vss-visual-search/static/css/main.95ae3a30.css",
+    "main.js": "/vss-visual-search/static/js/main.18b18409.js",
+    "static/js/845.538fd7ea.chunk.js": "/vss-visual-search/static/js/845.538fd7ea.chunk.js",
+    "static/js/787.7c104ca9.chunk.js": "/vss-visual-search/static/js/787.7c104ca9.chunk.js",
+    "static/media/combo2.mp3": "/vss-visual-search/static/media/combo2.dc4a26f58622d3a5a4c0.mp3",
+    "static/media/conjs-img.png": "/vss-visual-search/static/media/conjs-img.d1ba3970365015d5ee9b.png",
+    "static/media/click.mp3": "/vss-visual-search/static/media/click.bac13dc239761d7d5b08.mp3",
+    "static/media/losingStreak.mp3": "/vss-visual-search/static/media/losingStreak.3e9f53afed48af7cc022.mp3",
+    "index.html": "/vss-visual-search/index.html",
+    "main.95ae3a30.css.map": "/vss-visual-search/static/css/main.95ae3a30.css.map",
+    "main.18b18409.js.map": "/vss-visual-search/static/js/main.18b18409.js.map",
+    "845.538fd7ea.chunk.js.map": "/vss-visual-search/static/js/845.538fd7ea.chunk.js.map",
+    "787.7c104ca9.chunk.js.map": "/vss-visual-search/static/js/787.7c104ca9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d88b98f.css",
-    "static/js/main.11536790.js"
+    "static/css/main.95ae3a30.css",
+    "static/js/main.18b18409.js"
   ]
 }
