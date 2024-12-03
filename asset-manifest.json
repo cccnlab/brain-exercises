@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vss-visual-search/static/css/main.95ae3a30.css",
-    "main.js": "/vss-visual-search/static/js/main.18b18409.js",
+    "main.js": "/vss-visual-search/static/js/main.1eefb32a.js",
     "static/js/845.538fd7ea.chunk.js": "/vss-visual-search/static/js/845.538fd7ea.chunk.js",
     "static/js/787.7c104ca9.chunk.js": "/vss-visual-search/static/js/787.7c104ca9.chunk.js",
     "static/media/combo2.mp3": "/vss-visual-search/static/media/combo2.dc4a26f58622d3a5a4c0.mp3",
@@ -10,12 +10,12 @@
     "static/media/losingStreak.mp3": "/vss-visual-search/static/media/losingStreak.3e9f53afed48af7cc022.mp3",
     "index.html": "/vss-visual-search/index.html",
     "main.95ae3a30.css.map": "/vss-visual-search/static/css/main.95ae3a30.css.map",
-    "main.18b18409.js.map": "/vss-visual-search/static/js/main.18b18409.js.map",
+    "main.1eefb32a.js.map": "/vss-visual-search/static/js/main.1eefb32a.js.map",
     "845.538fd7ea.chunk.js.map": "/vss-visual-search/static/js/845.538fd7ea.chunk.js.map",
     "787.7c104ca9.chunk.js.map": "/vss-visual-search/static/js/787.7c104ca9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95ae3a30.css",
-    "static/js/main.18b18409.js"
+    "static/js/main.1eefb32a.js"
   ]
 }
